@@ -63,9 +63,7 @@ const Home = () => {
       {/* Hero Section */}
       <section className="full-screen-section bg-primary">
         <div className="container-custom text-center">
-          <h1 className="mb-6">
-            Proactive Cybersecurity for a Reactive World
-          </h1>
+          <h1 className="site-title mb-4">Cyber Posture</h1>
           <p className="mb-12 max-w-3xl mx-auto">
             Stay ahead of threats with expert consulting, tailored risk mitigation, and proactive security assessments.
           </p>

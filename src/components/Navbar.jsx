@@ -7,8 +7,8 @@ const Navbar = () => {
       <div className="container-custom">
         <div className="flex justify-between h-16">
           <div className="flex items-center">
-            <Link to="/" className="brand-logo text-xl font-bold text-text-primary">
-              CyberPosture
+            <Link to="/" className="brand-logo">
+              CYBER POSTURE
             </Link>
           </div>
           <div className="hidden md:flex items-center space-x-8">
