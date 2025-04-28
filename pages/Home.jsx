@@ -3,6 +3,10 @@ import { Link } from 'react-router-dom';
 import { ShieldCheck, Server, Cloud, Lock, AlertCircle, ClipboardList, ArrowRight } from 'lucide-react';
 
 const Home = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   const services = [
     {
       title: 'Regulatory Compliance',
@@ -21,6 +25,24 @@ const Home = () => {
       description: 'Ensure your org is audit-ready by identifying and fixing control gaps.',
       icon: <ClipboardList className="w-6 h-6 text-accent" />,
       link: '/services/cyber-audit-readiness'
+    },
+    {
+      title: 'Cloud Security',
+      description: 'Protect your cloud infrastructure with advanced security measures and monitoring.',
+      icon: <Cloud className="w-6 h-6 text-accent" />,
+      link: '/services/cloud-security'
+    },
+    {
+      title: 'Data Security',
+      description: 'Safeguard your sensitive data with comprehensive protection strategies.',
+      icon: <Lock className="w-6 h-6 text-accent" />,
+      link: '/services/data-security'
+    },
+    {
+      title: 'Security Assessments',
+      description: 'Identify vulnerabilities and strengthen your security posture with expert assessments.',
+      icon: <AlertCircle className="w-6 h-6 text-accent" />,
+      link: '/services/security-assessments'
     }
   ];
 
@@ -71,7 +93,7 @@ const Home = () => {
             <Link to="/contact" className="btn btn-primary">
               Get a Free Quote
             </Link>
-            <Link to="/services" className="btn btn-secondary">
+            <Link to="/services" onClick={scrollToTop} className="btn btn-secondary">
               Learn More
             </Link>
           </div>
@@ -87,13 +109,20 @@ const Home = () => {
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <div key={index} className="card">
+              <Link 
+                key={index} 
+                to={service.link}
+                onClick={scrollToTop}
+                className="card hover:transform hover:scale-[1.02] transition-all duration-300"
+              >
                 <div className="flex items-center gap-4 mb-4">
                   {service.icon}
-                  <h3 className="text-accent">{service.title}</h3>
+                  <h3 className="text-accent hover:text-accent/80 transition-colors">
+                    {service.title}
+                  </h3>
                 </div>
-                <p>{service.description}</p>
-              </div>
+                <p className="text-text-secondary">{service.description}</p>
+              </Link>
             ))}
           </div>
         </div>
@@ -143,7 +172,7 @@ const Home = () => {
             </div>
             <div className="glass-card p-8">
               <img 
-                src="/ai-workflow.jpg" 
+                src="src/assets/ai-workflow.jpg" 
                 alt="AI Security Workflow" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
@@ -153,8 +182,9 @@ const Home = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="full-screen-section bg-secondary">
-        <div className="container-custom">
+      <section className="full-screen-section bg-secondary relative">
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/20"></div>
+        <div className="container-custom relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="mb-6">Why Choose CyberPosture?</h2>
@@ -195,7 +225,7 @@ const Home = () => {
             </div>
             <div className="glass-card p-8">
               <img 
-                src="/security-dashboard.png" 
+                src="src/assets/dashboard.png" 
                 alt="Security Dashboard" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />

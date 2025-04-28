@@ -21,14 +21,17 @@ const Navbar = () => {
             
             {/* Services Dropdown */}
             <div className="nav-item">
-              <button className="text-text-secondary hover:text-accent transition duration-300 flex items-center">
+              <Link to="/services" className="text-text-secondary hover:text-accent transition duration-300 flex items-center">
                 Services
                 <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
-              </button>
+              </Link>
               <div className="nav-dropdown">
                 <div className="nav-dropdown-content">
+                  <Link to="/services" className="nav-dropdown-item">
+                    All Services
+                  </Link>
                   <Link to="/services/cloud-security" className="nav-dropdown-item">
                     Cloud Security
                   </Link>
@@ -50,36 +53,6 @@ const Navbar = () => {
                 </div>
               </div>
             </div>
-
-            {/* Assessments Dropdown */}
-            <div className="nav-item">
-              <button className="text-text-secondary hover:text-accent transition duration-300 flex items-center">
-                Assessments
-                <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              <div className="nav-dropdown">
-                <div className="nav-dropdown-content">
-                  <Link to="/assessments/cyber-evaluations" className="nav-dropdown-item">
-                    Cyber Evaluations
-                  </Link>
-                  <Link to="/assessments/cyber-readiness" className="nav-dropdown-item">
-                    Cyber Readiness
-                  </Link>
-                </div>
-              </div>
-            </div>
-
-            {/* Tools Link */}
-            <Link to="/tools/corporate-tools" className="text-text-secondary hover:text-accent transition duration-300">
-              Corporate Tools
-            </Link>
-
-            {/* Training Link */}
-            <Link to="/training/cyber-training" className="text-text-secondary hover:text-accent transition duration-300">
-              Training
-            </Link>
 
             <Link to="/contact" className="text-text-secondary hover:text-accent transition duration-300">
               Contact

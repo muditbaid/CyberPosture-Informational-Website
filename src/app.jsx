@@ -16,7 +16,6 @@ import CloudSecurity from "../pages/services/CloudSecurity";
 import CyberAuditReadiness from "../pages/services/CyberAuditReadiness";
 import DataSecurity from "../pages/services/DataSecurity";
 import RegulatoryCompliance from "../pages/services/RegulatoryCompliance";
-import SecurityAssessments from "../pages/services/SecurityAssessments";
 import SecurityConsulting from "../pages/services/SecurityConsulting";
 
 const App = () => {
@@ -38,7 +37,6 @@ const App = () => {
         <Route path="/services/cyber-audit-readiness" element={<CyberAuditReadiness />} />
         <Route path="/services/data-security" element={<DataSecurity />} />
         <Route path="/services/regulatory-compliance" element={<RegulatoryCompliance />} />
-        <Route path="/services/security-assessments" element={<SecurityAssessments />} />
         <Route path="/services/security-consulting" element={<SecurityConsulting />} />
       </Routes>
       <Footer />
