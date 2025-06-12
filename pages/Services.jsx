@@ -47,9 +47,9 @@ const Services = () => {
             <Link 
               to={service.link}
               key={index}
-              className="gradient-border bg-secondary p-8 rounded-lg hover:bg-secondary/80 transition-all duration-300"
+              className="bg-secondary p-8 rounded-lg border-2 border-accent hover:transform hover:scale-[1.02] transition-all duration-300"
             >
-              <h3 className="mb-4 text-accent">{service.title}</h3>
+              <h3 className="mb-4 text-accent hover:text-accent/80 transition-colors">{service.title}</h3>
               <p className="text-text-secondary">{service.description}</p>
             </Link>
           ))}

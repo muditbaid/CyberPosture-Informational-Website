@@ -44,15 +44,16 @@ const Navbar = () => {
                   <Link to="/services/regulatory-compliance" className="nav-dropdown-item">
                     Regulatory Compliance
                   </Link>
-                  <Link to="/services/security-assessments" className="nav-dropdown-item">
-                    Security Assessments
-                  </Link>
                   <Link to="/services/security-consulting" className="nav-dropdown-item">
                     Security Consulting
                   </Link>
                 </div>
               </div>
             </div>
+
+            <Link to="/resources" className="text-text-secondary hover:text-accent transition duration-300">
+              Resources
+            </Link>
 
             <Link to="/contact" className="text-text-secondary hover:text-accent transition duration-300">
               Contact

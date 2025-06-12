@@ -12,9 +12,9 @@ const DataSecurity = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="bg-secondary p-8 rounded-lg border-2 border-accent">
-            <h2 className="text-3xl font-bold text-text-primary mb-6">Comprehensive Data Protection</h2>
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+          <div className="bg-secondary p-8 rounded-lg border-2 border-accent hover:transform hover:scale-[1.02] transition-all duration-300">
+            <h2 className="text-3xl font-bold text-accent hover:text-accent/80 transition-colors mb-6">Comprehensive Data Protection</h2>
             <p className="text-text-secondary mb-6">
               Our Data Security services help organizations implement robust controls to protect 
               sensitive data across all environments, ensuring confidentiality, integrity and 
@@ -50,8 +50,8 @@ const DataSecurity = () => {
               </svg>
             </Link>
           </div>
-          <div className="bg-secondary p-8 rounded-lg border-2 border-accent">
-            <h3 className="text-2xl font-bold text-text-primary mb-4">Our Data Security Approach</h3>
+          <div className="bg-secondary p-8 rounded-lg border-2 border-accent hover:transform hover:scale-[1.02] transition-all duration-300">
+            <h2 className="text-3xl font-bold text-accent hover:text-accent/80 transition-colors mb-6">Our Approach</h2>
             <p className="text-text-secondary mb-4">
               We implement a comprehensive data security program that includes:
             </p>

@@ -12,9 +12,9 @@ const RegulatoryCompliance = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div>
-            <h2 className="text-3xl font-bold text-accent mb-6">Compliance Expertise</h2>
+        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
+          <div className="bg-secondary p-8 rounded-lg border-2 border-accent hover:transform hover:scale-[1.02] transition-all duration-300">
+            <h2 className="text-3xl font-bold text-accent hover:text-accent/80 transition-colors mb-6">Compliance Expertise</h2>
             <p className="text-text-secondary mb-6">
               Our Regulatory Compliance services help organizations meet industry-specific 
               requirements including HIPAA, PCI DSS, GDPR, CCPA, and other data protection 
