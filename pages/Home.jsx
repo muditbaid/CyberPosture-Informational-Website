@@ -7,7 +7,7 @@ import { loadFull } from 'tsparticles';
 const lockSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
 
 const particlesInit = async (engine) => {
-  await loadSlim(engine);
+  await loadFull(engine);
 };
 
 const Home = () => {
@@ -131,7 +131,7 @@ const Home = () => {
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link to="/contact" className="btn btn-primary">
-              Get a Free Quote
+              Get a Free Consultation
             </Link>
             <Link to="/services" onClick={scrollToTop} className="btn btn-secondary">
               Learn More
@@ -211,8 +211,8 @@ const Home = () => {
               </ul>
             </div>
             <div className="glass-card p-8">
-              <img 
-                src="CyberPosture-Informational-Website/ai-workflow.jpg" 
+              <img
+                src="/ai-workflow.jpg" 
                 alt="AI Security Workflow" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
@@ -265,7 +265,7 @@ const Home = () => {
             </div>
             <div className="glass-card p-8">
               <img 
-                src="/CyberPosture-Informational-Website/dashboard.png" 
+                src="/dashboard.png" 
                 alt="Security Dashboard" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
