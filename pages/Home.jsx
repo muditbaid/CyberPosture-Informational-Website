@@ -211,7 +211,7 @@ const Home = () => {
               </ul>
             </div>
             <div className="glass-card p-8">
-              <img
+              <img 
                 src="/ai-workflow.jpg" 
                 alt="AI Security Workflow" 
                 className="rounded-lg shadow-lg w-full h-auto"
