@@ -212,7 +212,7 @@ const Home = () => {
             </div>
             <div className="glass-card p-8">
               <img 
-                src="CyberPosture-Informational-Website/ai-workflow.jpg" 
+                src="/CyberPosture-Informational-Website/ai-workflow.jpg" 
                 alt="AI Security Workflow" 
                 className="rounded-lg shadow-lg w-full h-auto"
               />
