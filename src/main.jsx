@@ -6,7 +6,7 @@ import App from './app.jsx'
 
 createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <BrowserRouter basename="/CyberPosture-Informational-Website">
+    <BrowserRouter>
       <App />
     </BrowserRouter>
   </React.StrictMode>,
