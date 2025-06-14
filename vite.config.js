@@ -14,5 +14,5 @@ export default defineConfig({
       '@': '/src',
     },
   },
-  base: '/CyberPosture-Informational-Website/',
+  base: '/'
 });
