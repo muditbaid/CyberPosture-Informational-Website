@@ -1,0 +1,4 @@
+assessments: regulatory vs non-regulatory
+Standard assessments vs req assessments (req usually by the law)
+purchase assessments: list of all assessments
+dashboard -> show all that user has purchased and its progress

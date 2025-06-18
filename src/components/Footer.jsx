@@ -119,11 +119,11 @@ const Footer = () => {
         </div>
 
         {/* Contact Info */}
-        <div className="flex flex-col md:border-l md:border-accent/10 md:pl-6 items-center md:items-start">
+        <div className="flex flex-col md:border-l md:border-accent/10 md:pl-6 items-start">
           <h4 className="footer-heading">Contact Us</h4>
           <ul className="space-y-1">
-            <li className="footer-text">contact@cyberposture.com</li>
-            <li className="footer-text">+1 (555) 123-4567</li>
+            <li className="footer-text">cyberposture2023@gmail.com</li>
+            <li className="footer-text">+1 (214) 966-5167</li>
           </ul>
         </div>
       </div>

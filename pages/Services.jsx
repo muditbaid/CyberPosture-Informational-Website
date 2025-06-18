@@ -38,7 +38,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-primary">
       <div className="container-custom py-20">
-        <h1 className="text-center mb-6 text-text-primary">Our Services</h1>
+        <h1 className="text-center mb-6 text-text-primary mt-12">Our Services</h1>
         <p className="text-center text-xl md:text-2xl mb-16 max-w-4xl mx-auto text-text-secondary">
           Comprehensive security solutions to protect your organization's digital assets and infrastructure
         </p>

@@ -1,78 +1,69 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+const assessments = [
+  'SOC-1',
+  'SOC-2',
+  'HIPAA',
+  'GDPR',
+  'GLBA',
+  'CCPA',
+  'FINRA',
+  'FEDRAMP',
+  'FISMA',
+];
+
 const RegulatoryCompliance = () => {
   return (
-    <section className="py-20 bg-primary">
-      <div className="container-custom">
-        <div className="text-center mb-16">
-          <h1 className="text-4xl font-bold text-text-primary mb-4">Regulatory Compliance Services</h1>
-          <p className="text-xl text-text-secondary max-w-3xl mx-auto">
-            Navigate complex regulatory requirements with confidence
-          </p>
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
-          <div className="bg-secondary p-8 rounded-lg border-2 border-accent hover:transform hover:scale-[1.02] transition-all duration-300">
-            <h2 className="text-3xl font-bold text-accent hover:text-accent/80 transition-colors mb-6">Compliance Expertise</h2>
-            <p className="text-text-secondary mb-6">
-              Our Regulatory Compliance services help organizations meet industry-specific 
-              requirements including HIPAA, PCI DSS, GDPR, CCPA, and other data protection 
-              regulations.
+    <section className="py-20 bg-primary min-h-screen">
+      <div className="container-custom max-w-5xl mx-auto">
+        <div className="text-center mb-12">
+          <h1 className="text-4xl md:text-5xl font-bold text-accent mb-4">Regulatory Compliance Assessments</h1>
+          <div className="mx-auto mb-6" style={{ maxWidth: '1000px' }}>
+            <p className="text-xl text-text-secondary">
+              Prepares your organization for a cyber audit by ensuring your systems and processes are in compliance with relevant regulations.<br/>
+              Cyber Posture can help you develop a plan for responding to a cyber audit and ensure a smooth audit process.
             </p>
-            <ul className="mb-8 space-y-3 text-text-secondary">
-              <li className="flex items-start">
-                <svg className="h-5 w-5 text-accent mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Compliance gap assessments</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-5 w-5 text-accent mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Policy and procedure development</span>
-              </li>
-              <li className="flex items-start">
-                <svg className="h-5 w-5 text-accent mr-2 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span>Remediation planning and implementation</span>
-              </li>
-            </ul>
-            <Link
-              to="/contact"
-              className="btn btn-primary"
-            >
-              Get Started
-              <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </Link>
           </div>
-          <div className="gradient-border bg-secondary p-8 rounded-lg">
-            <h3 className="text-2xl font-bold text-accent mb-4">Our Compliance Process</h3>
-            <p className="text-text-secondary mb-4">
-              We help organizations achieve and maintain compliance through:
-            </p>
-            <ul className="space-y-3">
-              <li className="flex items-start">
-                <span className="bg-accent text-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">1</span>
-                <span className="text-text-secondary">Regulatory requirements analysis</span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-accent text-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">2</span>
-                <span className="text-text-secondary">Current state assessment</span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-accent text-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">3</span>
-                <span className="text-text-secondary">Remediation roadmap development</span>
-              </li>
-              <li className="flex items-start">
-                <span className="bg-accent text-primary rounded-full w-6 h-6 flex items-center justify-center mr-3 flex-shrink-0">4</span>
-                <span className="text-text-secondary">Ongoing compliance monitoring</span>
-              </li>
-            </ul>
+        </div>
+        <div className="flex flex-col md:flex-row gap-10 items-start justify-center">
+          {/* Assessment List */}
+          <div className="flex-1">
+            <h2 className="text-2xl font-bold text-accent mb-6 text-center md:text-left">Assessment Types</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              {assessments.map((item) => (
+                <div
+                  key={item}
+                  className="bg-secondary border border-accent rounded-md text-center text-text-primary font-semibold text-base py-2 px-4 m-0 shadow-sm transition-all duration-300 hover:bg-accent hover:text-black"
+                  style={{ minWidth: '100px', maxWidth: '220px', margin: '0 auto' }}
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+          {/* Why Choose Box */}
+          <div className="flex-1">
+            <div className="bg-secondary rounded-xl border border-accent p-8 shadow-lg text-center md:text-left">
+              <h3 className="text-xl font-bold text-accent mb-4">Why Choose Cyber Posture?</h3>
+              <ul className="space-y-3 text-text-secondary text-base mb-8 text-left max-w-xl mx-auto">
+                <li className="flex items-center gap-2">
+                  <span className="inline-block w-3 h-3 rounded-full bg-accent"></span>
+                  Expert guidance for audit readiness and compliance
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="inline-block w-3 h-3 rounded-full bg-accent"></span>
+                  End-to-end support for documentation, remediation, and reporting
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="inline-block w-3 h-3 rounded-full bg-accent"></span>
+                  Ongoing compliance monitoring and advisory
+                </li>
+              </ul>
+              <Link to="/contact" className="btn btn-primary text-lg px-8 py-3 rounded-lg font-semibold shadow hover:bg-accent/90 transition-all duration-300 block mx-auto mt-6">
+                Talk to our expert
+              </Link>
+            </div>
           </div>
         </div>
       </div>
