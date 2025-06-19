@@ -124,6 +124,7 @@ const Footer = () => {
           <ul className="space-y-1">
             <li className="footer-text">cyberposture2023@gmail.com</li>
             <li className="footer-text">+1 (214) 966-5167</li>
+            <li className="footer-text">1017 Yarnell Place, Plano, TX 75094</li>
           </ul>
         </div>
       </div>
