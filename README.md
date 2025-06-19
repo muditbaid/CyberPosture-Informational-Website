@@ -1,129 +1,66 @@
-# CyberPosture - Cybersecurity Solutions Website
+# CyberPosture
 
-A modern, responsive website built with React and Tailwind CSS, showcasing comprehensive cybersecurity services and solutions.
+## About CyberPosture
 
-![CyberPosture](screenshot.png)
+**CyberPosture** is a cybersecurity consulting and solutions company dedicated to helping organizations strengthen their digital defenses, achieve regulatory compliance, and stay ahead of evolving cyber threats. We provide expert guidance, risk assessments, and tailored security services for businesses of all sizes and industries.
 
-## 🚀 Features
+Our mission is to empower organizations to build resilient, secure, and compliant digital environments through proactive consulting, innovative technology, and continuous improvement.
 
-- **Modern Design**: Sleek, professional interface with dark theme and accent colors
-- **Responsive Layout**: Fully responsive design that works on all devices
-- **Interactive Components**: Dynamic navigation with dropdowns
-- **Service Sections**:
-  - Cloud Security
-  - Cyber Audit Readiness
-  - Data Security
-  - Regulatory Compliance
-  - Security Assessments
-  - Security Consulting
-- **Assessment Tools**: Comprehensive security evaluation tools
-- **Corporate Solutions**: Tailored enterprise security solutions
-- **Training Resources**: Cybersecurity training materials
+---
 
-## 🛠️ Technologies Used
+## Website Overview
 
-- React.js
-- Tailwind CSS
-- React Router
-- Google Fonts (Orbitron, Economica)
-- Lucide React Icons
+This is the official website for CyberPosture, designed to showcase our services, expertise, and thought leadership in cybersecurity. The site features a modern, interactive, and responsive user interface with a black and green theme, reflecting our focus on cutting-edge security and innovation.
 
-## 🏗️ Installation
+### Key Features
+- **Service Overviews:** Detailed pages for Cloud Security, Regulatory Compliance, Security Consulting, Data Security, Cyber Audit Readiness, and more.
+- **Interactive Assessments:** Modern, accessible UI for exploring security assessments and consulting offerings.
+- **Contact & Consultation:** Easy-to-use contact forms and clear company contact information for client engagement.
+- **Industry Solutions:** Information tailored for key verticals such as Banking, Fintech, Healthcare, and SaaS.
+- **Modern UI/UX:** Built with accessibility, performance, and a professional aesthetic in mind.
 
-1. Clone the repository:
-```bash
-git clone https://github.com/yourusername/CyberPosture-Informational-Website.git
-```
+---
 
-2. Navigate to the project directory:
-```bash
-cd CyberPosture-Informational-Website
-```
+## Technical Architecture
 
-3. Install dependencies:
-```bash
-npm install
-```
+- **Frontend:** React.js (with Vite for fast builds and hot module reload)
+- **Styling:** Tailwind CSS for utility-first, responsive design
+- **Routing:** React Router for seamless navigation
+- **UI Enhancements:**
+  - Lucide React Icons for consistent iconography
+  - Google Fonts (Orbitron for headings, Economica for body text)
+  - Animated backgrounds and interactive cards
+- **Deployment:** Hosted on Netlify with custom domain and SSL
+- **Security:**
+  - Content Security Policy (CSP) configured for safe font and style loading
+  - HTTPS enforced for all traffic
 
-4. Start the development server:
-```bash
-npm run dev
-```
+---
 
-The site will be available at `http://localhost:5173`
+## About the Company
 
-## 📁 Project Structure
+CyberPosture is committed to:
+- Delivering expert cybersecurity consulting and managed services
+- Helping clients achieve and maintain compliance (HIPAA, PCI DSS, GDPR, etc.)
+- Providing actionable risk assessments and security roadmaps
+- Supporting organizations with cloud security, data protection, and incident response
+- Educating clients through resources and thought leadership
 
-```
-CyberPosture-Informational-Website/
-├── src/
-│   ├── components/         # Reusable components
-│   ├── assets/            # Images and static files
-│   ├── index.css          # Global styles
-│   ├── app.jsx           # Main app component
-│   └── main.jsx          # Entry point
-├── pages/
-│   ├── services/         # Service-specific pages
-│   ├── assessments/      # Assessment tools
-│   ├── Home.jsx         # Homepage
-│   ├── About.jsx        # About page
-│   ├── Contact.jsx      # Contact page
-│   └── Services.jsx     # Services overview
-└── public/              # Public assets
-```
-
-## 🎨 Customization
-
-### Colors
-The website uses a custom color palette defined in the CSS:
-- Primary: Dark theme background
-- Secondary: Slightly lighter dark shade
-- Accent: Green highlight color
-- Text: White and gray shades
-
-### Typography
-- Primary Font: Orbitron (Logo and Headings)
-- Secondary Font: Economica (Body text)
-
-## 🔧 Development
-
-### Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-- `npm run lint` - Run ESLint
-- `npm test` - Run tests
-
-## 📱 Responsive Design
-
-The website is fully responsive with breakpoints at:
-- Mobile: < 640px
-- Tablet: 640px - 1024px
-- Desktop: > 1024px
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 📞 Contact
-
-For any queries or support, please contact:
-- Email: contact@cyberposture.com
+**Contact us:**
+- Email: cyberposture2023@gmail.com
+- Phone: +1 (214) 966-5167
+- Address: 1017 Yarnell Place, Plano, TX 75094
 - Website: [www.cyberposture.com](https://www.cyberposture.com)
 
-## 🙏 Acknowledgments
+---
 
-- [Tailwind CSS](https://tailwindcss.com/)
+## Credits & Acknowledgments
 - [React](https://reactjs.org/)
 - [Vite](https://vitejs.dev/)
-- [Google Fonts](https://fonts.google.com/)
+- [Tailwind CSS](https://tailwindcss.com/)
 - [Lucide Icons](https://lucide.dev/)
+- [Google Fonts](https://fonts.google.com/)
+
+---
+
+© CyberPosture. All rights reserved.

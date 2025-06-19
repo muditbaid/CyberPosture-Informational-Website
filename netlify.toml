@@ -22,15 +22,15 @@
     Referrer-Policy = "strict-origin-when-cross-origin"
     Content-Security-Policy = "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' data: https://fonts.gstatic.com;"
 
-# Domain settings
-# [context.production]
-#   command = "npm run build"
-#   publish = "dist"
-#   environment = { NODE_ENV = "production" }
-
-# Force HTTPS
+# Force HTTPS for all traffic
 [[redirects]]
   from = "http://*"
   to = "https://:splat"
   status = 301
-  force = true 
+  force = true
+
+# Domain settings
+# [context.production]
+#   command = "npm run build"
+#   publish = "dist"
+#   environment = { NODE_ENV = "production" } 
