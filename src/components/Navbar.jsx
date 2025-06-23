@@ -3,15 +3,18 @@ import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   return (
-    <nav className="bg-secondary shadow-lg">
+    <nav className="bg-secondary shadow-lg py-2">
       <div className="container-custom">
-        <div className="flex justify-between h-16">
-          <div className="flex items-center">
+        <div className="flex flex-col md:flex-row md:justify-between md:items-center">
+          <div className="flex flex-col items-start md:items-start">
             <Link to="/" className="brand-logo">
               CYBER POSTURE
             </Link>
+            <span className="text-xs md:text-sm text-text-secondary mt-1 ml-1 max-w-full whitespace-nowrap overflow-hidden text-ellipsis">
+              Stay ahead of threats with expert consulting, tailored risk mitigation, and proactive security assessments.
+            </span>
           </div>
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 mt-2 md:mt-0">
             <Link to="/" className="text-text-secondary hover:text-accent transition duration-300">
               Home
             </Link>

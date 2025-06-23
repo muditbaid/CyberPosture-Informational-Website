@@ -1,14 +1,6 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { ShieldCheck, Server, Cloud, Lock, AlertCircle, ClipboardList, ArrowRight } from 'lucide-react';
-import { Particles } from '@tsparticles/react';
-import * as tsparticlesEngine from "@tsparticles/engine";
-
-const lockSvg = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#4CAF50" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="10" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>`;
-
-const particlesInit = async (engine) => {
-  await tsparticlesEngine.loadFull(engine);
-};
 
 const Home = () => {
   const scrollToTop = () => {
@@ -88,66 +80,30 @@ const Home = () => {
     };
   }, []);
 
+  // Video play state
+  const [isPlaying, setIsPlaying] = useState(false);
+  const videoRef = useRef(null);
+
+  const handlePlay = () => {
+    setIsPlaying(true);
+    if (videoRef.current) {
+      videoRef.current.play();
+    }
+  };
+
   return (
     <main className="flex flex-col w-full">
-      {/* Hero Section */}
-      <section className="full-screen-section bg-primary relative overflow-hidden">
-        <Particles
-          id="tsparticles"
-          init={particlesInit}
-          options={{
-            fullScreen: { enable: true, zIndex: 0 },
-            background: { color: 'transparent' },
-            fpsLimit: 60,
-            interactivity: {
-              events: { onHover: { enable: true, mode: 'repulse' }, resize: true },
-              modes: { repulse: { distance: 100, duration: 0.4 } }
-            },
-            particles: {
-              color: { value: '#4CAF50' },
-              links: { color: '#4CAF50', distance: 140, enable: true, opacity: 0.3, width: 1 },
-              move: { enable: true, speed: 1.2, direction: 'none', random: false, straight: false, outModes: 'out' },
-              number: { value: 40, density: { enable: true, area: 800 } },
-              opacity: { value: 0.5 },
-              shape: {
-                type: ['circle', 'image'],
-                image: [
-                  {
-                    src: `data:image/svg+xml,${encodeURIComponent(lockSvg)}`,
-                    width: 20,
-                    height: 20
-                  }
-                ]
-              },
-              size: { value: { min: 4, max: 8 } }
-            },
-            detectRetina: true
-          }}
-        />
-        <div className="container-custom text-center relative z-10">
-          <h1 className="site-title mb-4">Cyber Posture</h1>
-          <p className="mb-12 max-w-3xl mx-auto">
-            Stay ahead of threats with expert consulting, tailored risk mitigation, and proactive security assessments.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Link to="/contact" className="btn btn-primary">
-              Get a Free Consultation
-            </Link>
-            <Link to="/services" onClick={scrollToTop} className="btn btn-secondary">
-              Learn More
-            </Link>
-          </div>
-        </div>
-      </section>
+      {/* Border below navbar */}
+      <div className="w-full border-b-4 border-accent/80"></div>
 
-      {/* Services Section */}
-      <section className="full-screen-section bg-secondary">
-        <div className="container-custom text-center">
+      {/* Services Section - grey bg, broader for video */}
+      <section className="full-screen-section bg-secondary py-20">
+        <div className="container-custom max-w-7xl mx-auto text-center">
           <h2 className="mb-6">Our Cybersecurity Services</h2>
           <p className="mb-12 max-w-3xl mx-auto">
             Comprehensive security solutions tailored to your organization's needs
           </p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
             {services.map((service, index) => (
               <Link 
                 key={index} 
@@ -165,11 +121,37 @@ const Home = () => {
               </Link>
             ))}
           </div>
+          {/* Video embed with play button and blur/brightness effect */}
+          <div className="flex justify-center">
+            <div className="w-full md:w-3/4 lg:w-2/3 xl:w-1/2 aspect-video relative rounded-lg overflow-hidden">
+              <video
+                ref={videoRef}
+                src="/demo.mp4"
+                className={`w-full h-full object-contain transition-all duration-500 bg-black ${!isPlaying ? 'filter blur-sm brightness-50' : ''}`}
+                controls={isPlaying}
+                onPause={() => setIsPlaying(false)}
+                onEnded={() => setIsPlaying(false)}
+                poster="/lock.png"
+              />
+              {!isPlaying && (
+                <button
+                  onClick={handlePlay}
+                  className="absolute inset-0 flex items-center justify-center w-full h-full bg-black/30 hover:bg-black/10 transition"
+                  aria-label="Play video"
+                >
+                  <svg className="w-20 h-20 text-accent drop-shadow-lg" fill="currentColor" viewBox="0 0 64 64">
+                    <circle cx="32" cy="32" r="32" fill="rgba(0,0,0,0.5)" />
+                    <polygon points="26,20 50,32 26,44" fill="#4CAF50" />
+                  </svg>
+                </button>
+              )}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* AI Innovation Section */}
-      <section className="full-screen-section bg-primary">
+      {/* AI Innovation Section - black bg */}
+      <section className="full-screen-section bg-primary py-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div>
@@ -221,8 +203,8 @@ const Home = () => {
         </div>
       </section>
 
-      {/* Why Choose Us Section */}
-      <section className="full-screen-section bg-secondary relative">
+      {/* Why Choose Us Section - grey bg */}
+      <section className="full-screen-section bg-secondary relative py-20">
         <div className="absolute inset-0 bg-gradient-to-b from-transparent to-primary/20"></div>
         <div className="container-custom relative">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
